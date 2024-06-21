@@ -3,12 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Stationery Store</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <button id="myButton">Click Me!</button>
+    <header>
+        <div class="container">
+            <h1>Stationery Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Quality Stationery for Your Everyday Needs</h2>
+            <p>Discover our range of pens, pencils, and books</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>We provide high-quality stationery products to meet all your needs, from school supplies to professional office items. Our mission is to deliver exceptional value and service to our customers.</p>
+    </section>
+
+    <section id="products" class="container">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product" onclick="showProductDetails('Pen', 'High-quality ballpoint pen', 'images/pen.jpg')">
+                <img src="images/pen.jpg" alt="Pen">
+                <h3>Pen</h3>
+                <p>High-quality ballpoint pen</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="product" onclick="showProductDetails('Pencil', 'Durable and reliable pencil', 'images/pencil.jpg')">
+                <img src="images/pencil.jpg" alt="Pencil">
+                <h3>Pencil</h3>
+                <p>Durable and reliable pencil</p>
+                <button class="btn">Buy Now</button>
+            </div>
+            <div class="product" onclick="showProductDetails('Notebook', '100-page lined notebook', 'images/notebook.jpg')">
+                <img src="images/notebook.jpg" alt="Notebook">
+                <h3>Notebook</h3>
+                <p>100-page lined notebook</p>
+                <button class="btn">Buy Now</button>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p><strong>Address:</strong> 123 Stationery St, Paper City, PC 12345</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> contact@stationerystore.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Stationery Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductDetails()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Product Image">
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>
+
